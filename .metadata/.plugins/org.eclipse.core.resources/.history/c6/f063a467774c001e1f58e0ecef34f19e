@@ -6,8 +6,8 @@ class Monkey
 {
 	void jump() {
 		Tiger tiger = new Tiger();
-		//tiger.hunt();
-		//tiger.run();
+		tiger.hunt();
+		tiger.run();
 	}
 }
 

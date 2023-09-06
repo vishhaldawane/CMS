@@ -36,5 +36,15 @@ class WhiteTiger extends Tiger
 		System.out.println("White tiger is jumping..");;
 	}
 }
-
+class Lion
+{
+	void show() {
+		Tiger tiger = new Tiger();
+		System.out.println("defaultA   "+tiger.defaultA);
+		System.out.println("privateB   "+tiger.privateB);
+		System.out.println("protectedC "+tiger.protectedC);
+		System.out.println("publicD    "+tiger.publicD);
+		
+	}
+}
 
