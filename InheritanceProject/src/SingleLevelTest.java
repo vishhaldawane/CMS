@@ -6,12 +6,14 @@ public class SingleLevelTest {
 		
 		Person person = new Person('F',"Jane",23);
 		person.card.setAdhaarCard("Jane Dsouza", "123412341234", "Kerala", "10-Jan-2000", "98765 43321");
+		person.pan.setPanCard("JTRES3456A", "Peter Dsouze");
 		person.showPerson();
 		
 		System.out.println("\n**************\n");
 		
 		Student student = new Student('M',"Jack",21,1234,"Mech Eng","Bharati VidyaPeeth",9.9f);
 		student.card.setAdhaarCard("Jack Dmellow", "523452345234", "Goa", "10-Feb-2001", "88765 48822");
+		student.pan.setPanCard("JQWE3586B", "Smith Dmellow");
 
 		student.showStudent();
 		
@@ -19,6 +21,7 @@ public class SingleLevelTest {
 		
 		Employee employee = new Employee('F',"Julie",24,4455,"EXTC","Vivekananda Polytechnic",9.5f,8888,"CMS","IT","Analyst","Bengaluru",45000);
 		employee.card.setAdhaarCard("Julie Abraham", "567823452345", "Mumbai", "12-Dec-2002", "45678 23456");
+		employee.pan.setPanCard("JUTYU1234T", "Micheal Abraham");
 		employee.showEmployee();
 		
 		
@@ -54,10 +57,26 @@ class AdhaarCard
 	
 }
 
-class PanCard{
-	void showPan() {
-		System.out.println("showing pan.....");
+
+class PanCard
+{
+	String pancardNumber;
+	String fatherName;
+	
+	public void setPanCard(String pancardNumber, String fatherName) {
+		this.pancardNumber = pancardNumber;
+		this.fatherName = fatherName;
 	}
+
+
+	void showPanCard() {
+		System.out.println("---PAN INFO-----");
+		System.out.println("Pan Card No    : "+pancardNumber);
+		System.out.println("Father Name    : "+fatherName);
+		
+	}
+	
+	
 }
 class Passport{
 	void showPassport() {
@@ -78,6 +97,7 @@ class Person
 	int age; //has
 	AdhaarCard card = new AdhaarCard(); //hasA
 	PanCard pan = new PanCard();
+	
 	Passport passport = new Passport();
 	DrivingLicense drivingLicense = new DrivingLicense();
 	
@@ -96,7 +116,7 @@ class Person
 		System.out.println("name   : "+name);
 		System.out.println("age    : "+age);
 		card.showAdhaarCard();
-		pan.showPan();
+		pan.showPanCard();
 		passport.showPassport();
 		drivingLicense.showDrivingLicense();
 	}

@@ -2,9 +2,21 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="java.math.BigInteger"/>
     <fullyQualifiedTypeName name="Point2D"/>
-    <fullyQualifiedTypeName name="SavingsAccount"/>
     <fullyQualifiedTypeName name="HeartSurgeon"/>
     <fullyQualifiedTypeName name="GraphicalChess"/>
     <fullyQualifiedTypeName name="Flight"/>
     <fullyQualifiedTypeName name="GrandFather"/>
+    <fullyQualifiedTypeName name="ColouredPoint3D"/>
+    <fullyQualifiedTypeName name="jungle.river.Frog"/>
+    <fullyQualifiedTypeName name="SavingsAccount"/>
+    <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+    <fullyQualifiedTypeName name="java.lang.StringIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="RedSignalDishonouredException"/>
+    <fullyQualifiedTypeName name="SpeedLimitException"/>
+    <fullyQualifiedTypeName name="StepneyPuncturedxception"/>
+    <fullyQualifiedTypeName name="AdhaarCard"/>
+    <fullyQualifiedTypeName name="PanCard"/>
+    <fullyQualifiedTypeName name="DrivingLicense"/>
+    <fullyQualifiedTypeName name="Sugar"/>
+    <fullyQualifiedTypeName name="MilkShake"/>
 </qualifiedTypeNameHistroy>
