@@ -4,9 +4,13 @@ public class DogTest {
 		
 		System.out.println("Begin...");
 		
-		Dog dog1 = new Dog("Tommy",20);
-		dog1.showDog();
-	
+		try {
+			Dog dog1 = new Dog("Tommy",12);
+			dog1.showDog();
+		}
+		catch(RuntimeException e) {
+			System.out.println("Some Problem : "+e);
+		}
 		
 		System.out.println("-------");
 		
@@ -97,11 +101,17 @@ class Dog
 		
 		this.name = name;
 		if(age>14) {
-			System.out.println("Dogs age cannot exceed 14");
+			//System.out.println("Dogs age cannot exceed 14");
+			throw new RuntimeException("Dogs age cannot exceed 14");
+		}
+		else  if(age < 0 ){
+			throw new RuntimeException("Dogs age cannot be in negative...");
+		
 		}
 		else {
 			this.age = age;
 		}
+		
 		System.out.println("==> Dog(name,int)...FINISHED");
 
 	}
