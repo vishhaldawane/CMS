@@ -607,13 +607,61 @@ ArrayIndexOutOfBoundsException StringIndexOutOfBoundsException
 User defined exception (Custom exception)
 ------------------------
 
-
 		checked			unchecked
 		|			|
 	verified by the		ignored by the  
 	compiler		compiler
 
 	CarKeyNotFoundException		RedSignalDishonouredException
+
+
+
+Aggregation			vs		Composition
+------------					----------
+Person						PanCard
+|
+Student						Person hasA PanCard
+|						Student hasA ReportCard
+Employee					Employee hasA SalarySlip
+
+(Employee is an aggregate
+total of Person+Student+
+Employee)
+
+Composition
+-------------
+
+	- hasA relationship in java
+
+
+	object inside a class design
+
+
+			Association
+			 |
+	--------------------------------------------------
+	|		|		|		|
+Aggregation	Composition	PassingObject	returning Object
+				as Argument	as a return value
+isA		hasA		usesA		producesA
+
+
+
+class WashingMachine extends Machine
+{
+	WashingDrum drum = new WashingDrum();
+
+	Laundry wash(Cloth cloth, WashingPowder w, Water w, Electricity e)
+	{
+
+	}
+	int findAvg(int i, int j, int k)
+	{
+		return (i+j+k)/3.0
+
+	}
+}
+
 
 
 
