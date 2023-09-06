@@ -29,7 +29,7 @@ class Vehicle
 }
 class Car extends Vehicle //isA
 {
-	Engine engine1 = new Engine();
+	Engine engine1 = new Engine(); //hasA
 	
 	void startCar() {
 		System.out.println("Starting the car....");
