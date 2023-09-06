@@ -403,8 +403,8 @@ class CardMagician extends Magician
 3. overload constructors
 4. constructor invocation in
 	class hierarchy
-5. packages in java 
-	
+5. packages in java  - pre- read
+6. exception handling - pre-read	
 
 	class Hotel
 	{
@@ -414,3 +414,273 @@ class CardMagician extends Magician
 		A(int a,int b) { }
 		A(int a) { }
 	}
+
+
+			Point2D
+			|x,y
+		-------------------
+		|		|color
+		Point3D		ColouredPoint2D <-- make this one
+		|z
+	------------------
+	|color
+	ColouredPoint3D
+
+
+
+
+		Person person = new Person('F',"Jane",23);
+		|	 |	 |	  |
+		class	ref to allocator ctor
+			Object
+
+
+		STACK				HEAP
+
+
+					FIELD AREA
+
+					gender	name	age
+					-------------------------
+					|  F	| Jane	| 23	|
+					-------------------------
+		  +-------------------->100
+		  |
+		+-------+
+		|100	|<-value		METHOD AREA
+		+-------+ of the ref		
+		person				Person(...) { }
+						toString() { }
+
+	
+
+Student student = new Student('M',"Jack",21,1234,"Mech Eng","Bharati VidyaPeeth",9.9f);
+
+	
+
+					 FIELD AREA
+
+                                        gender  name    age	 rollNumber  stream    college    finalCgp
+                                        ----------------------------------------------------------------
+                                        |  M | Jack  | 21    |1234	   | MEch    |Bhar..    | 9.9f  |
+                                        ----------------------------------------------------------------
+                  +-------------------->200
+                  |
+                +-------+
+                |200    |<-value                METHOD AREA
+                +-------+ of the ref
+                student                          Student(......) { }
+                         	                 showStuent() { }
+
+
+
+
+			Person
+			|
+			Magician
+			|
+			CardMagician
+
+
+		Device
+		|
+		Camera
+		|
+
+		VideoCamera
+
+
+
+	Packages
+	----------
+
+		directories = packages
+
+
+		to organize the files 
+
+				
+				java
+				|
+			-----------------------------------
+			|	|	|	|	|
+			lang	awt	sql	net	io
+			|	|	|	|	|
+			System  Frame 	Driver	Socket	File
+			String  Button
+			Object  Checkbox
+			...
+
+
+				jungle <-- main package
+				|
+			-------------------------
+			|	|	|	|
+			cave	tree	river	house <-- sub packages
+			|	|	|	|
+			Tiger	Parrot  Frog	FarmHouse <--- classes
+
+
+		*** package names wont have spaces within
+
+
+			jungle
+			jungle.cave
+
+			. is the separator
+
+		hence . cannot be the name within the packagename
+
+
+
+ACCESS SPECIFIER
+--------------------
+
+	1. DEFAULT <-- not a keyword <-- it means blank
+		only available within the current folder/package
+
+		
+	2. private
+		not availble except the enclosing members of the class
+
+	3. protected
+		can be referred by the child or non-child in same package
+		cannot be referrd by non-child in different package
+		
+	4. public
+		available anywhere
+
+
+	SavingsAccount savAcc = new SavingsAccount(-105,....);
+				|
+				|
+				allocator
+				- it is constructing the data members
+
+
+				accountNumber accountHolder accountBalance  accountType <-- new keyword creates the data structure in the memory
+				..		...		...		.. <----- constructor would fill up the values
+
+
+
+
+
+
+Exception handling
+-------------------
+
+	Exception = runtime error
+
+	
+			Errors
+			|
+	----------------------------------------------------
+	|	  |	     |		|		|
+	compile	  library  exception	fatal		logical
+	|	   |	    |		|		4+4=16
+	Syntax   .class	 errors at	out of
+		 files 	  runtime	memory
+		 are missing
+
+
+				Throwable
+				|
+			------------------
+			|		|
+			Error		Exception
+					| checked
+				------------------------------------------------------------
+				|		|			|		|
+			RuntimeExcpeption  CarKeyNotFoundException	IOException	SQLException
+			|unchecked
+	------------------------------------------
+	|	    |		|		|
+ArithmeticException | NullPointerExcpetion  RedSignalDishonouredException
+		    |
+	IndexOutOfBoundsException
+			|
+	-----------------------------------
+	|			 |
+ArrayIndexOutOfBoundsException StringIndexOutOfBoundsException
+
+
+User defined exception (Custom exception)
+------------------------
+
+		checked			unchecked
+		|			|
+	verified by the		ignored by the  
+	compiler		compiler
+
+	CarKeyNotFoundException		RedSignalDishonouredException
+
+
+
+Aggregation			vs		Composition
+------------					----------
+Person						PanCard
+|
+Student						Person hasA PanCard
+|						Student hasA ReportCard
+Employee					Employee hasA SalarySlip
+
+(Employee is an aggregate
+total of Person+Student+
+Employee)
+
+Composition
+-------------
+
+	- hasA relationship in java
+
+
+	object inside a class design
+
+
+			Association
+			 |
+	--------------------------------------------------
+	|		|		|		|
+Aggregation	Composition	PassingObject	returning Object
+				as Argument	as a return value
+isA		hasA		usesA		producesA
+
+
+
+class WashingMachine extends Machine
+{
+	WashingDrum drum = new WashingDrum();
+
+	Laundry wash(Cloth cloth, WashingPowder w, Water w, Electricity e)
+	{
+
+	}
+	int findAvg(int i, int j, int k)
+	{
+		return (i+j+k)/3.0
+
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
