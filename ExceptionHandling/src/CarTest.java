@@ -12,8 +12,15 @@ public class CarTest {
 
 		} 
 		catch (CarKeyNotFoundException e) {
-			System.out.println("Some Problem : "+e);
+			System.out.println("Some Problem1 : "+e);
 		}
+		catch(StepneyPuncturedxception e) {
+			System.out.println("Some problem2 : "+e);
+		}
+		finally {
+			System.out.println("Finally block runs regardless of the exceptions...");
+		}
+		
 		
 		System.out.println("End main ");
 		
@@ -28,7 +35,7 @@ class Car
 	
 	//throws clause is not mandatory for unchecked exceptions
 	
-	Car() throws CarKeyNotFoundException //this line is mandatory since the exception is of TYPE : checked 
+	Car() throws CarKeyNotFoundException, StepneyPuncturedxception//this line is mandatory since the exception is of TYPE : checked 
 	{
 		System.out.println("Car() constructor...");
 		double val = Math.random()%10;
@@ -42,6 +49,11 @@ class Car
 			
 			CarKeyNotFoundException e = new CarKeyNotFoundException("Oh No!!! Where is the car key????");
 			throw e;
+		}
+		
+		if(val<0.60) {
+			StepneyPuncturedxception s = new StepneyPuncturedxception("Oh no! stepney punctured, how do we proceed to the long drive now?");
+			throw s;
 		}
 	}
 	
@@ -66,6 +78,10 @@ class Car
 				throw new RedSignalDishonouredException("Oh No!!Red signal dishonoured....");
 					
 			}
+			if(val>0.80 && val<0.85) {
+				SpeedLimitException s = new SpeedLimitException("Oh No, crossed the speed limit");
+				throw s;
+			}
 		}
 		
 		System.out.println("long Drive finished.....");
@@ -81,6 +97,15 @@ class CarKeyNotFoundException extends Exception
 	}
 }
 
+//checked exception
+class StepneyPuncturedxception extends Exception
+{
+	StepneyPuncturedxception(String msg) {
+		super(msg);
+	}
+}
+
+
 
 //unchecked exception
 class RedSignalDishonouredException extends RuntimeException
@@ -89,6 +114,15 @@ class RedSignalDishonouredException extends RuntimeException
 		super(msg);
 	}
 }
+
+//unchecked exception
+class SpeedLimitException extends RuntimeException
+{
+	SpeedLimitException(String msg) {
+		super(msg);
+	}
+}
+
 
 
 
