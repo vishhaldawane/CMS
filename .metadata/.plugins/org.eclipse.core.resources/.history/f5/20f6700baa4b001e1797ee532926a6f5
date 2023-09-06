@@ -1,0 +1,43 @@
+
+public class Test {
+
+	public static void main(String[] args) {
+
+		System.out.println("Begin main");
+		System.out.println("Its wonderfull to work here in IDE");
+	
+		
+	}
+
+}
+
+class Farmer {
+	void farming() {
+		System.out.println("Farmer is farming...");
+	}
+	
+}
+
+class Insurance {
+	void claim() {
+		System.out.println("Claiming insurance....");
+	}
+}
+
+class Shopping {
+	void addItem() {
+		System.out.println("Adding item to the cart...");
+	}
+}
+
+class Student {
+	void applyForScholarship() {
+		System.out.println("Applying for sholarship....");
+	}
+}
+/*
+
+	javac Test.java
+	java  Test
+
+*/

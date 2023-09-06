@@ -1,0 +1,416 @@
+
+
+
+
+	Java 	Programming Language
+	|	 |		 |
+	brand	 |		to communicate
+	   set of instructions
+
+
+	listen	speaking	reading		writing
+	|	 |		 |		|
+	ear	mouth		eye		hand
+
+	<----concepts---->	program		program
+
+
+		invisible	visible
+		unmanifested	manifested
+
+		t	e	a	r
+		|	|	|	|	
+		thoughts|	actions |
+		  emotions		result
+
+
+
+
+	Java Freatures
+
+
+
+	1. Simple
+		- no pointers
+		- memory allocation features
+		- memory de-allocation features
+
+		- legacy of C++
+
+		- highly structured
+
+	2. Platform neutral
+
+	3. Object oriented
+
+	4. Dynamic 
+		Greeting greet1 = new Greeting();
+		greet.welcome();
+
+		Animal animal = new Monkey();
+		animal.eat();
+
+		animal = new Human();
+		animal.eat();
+
+	5. Multithreaded
+
+	6. Robust
+		ability to survive in critical situations
+		- exception handling
+		- automatic garbage collection
+	
+	7. Distributed
+		network programs can span across systems
+		and can communicate with each other
+		Machine1		Machine2		Machine3
+		|			|			|
+		A.class			B.class			C.class
+First.java
+----------
+class Greeting 
+{
+	void greet() {
+		System.out.println("hello");
+	} 
+}
+
+class MyMain
+{
+	public static void main(String args[])
+	{
+		Greeting greet1 = new Greeting();
+		greet1.greet(); <-- invocation of the function
+	}
+}
+
+
+			Data Types in Java
+				|
+				|
+		-----------------------------------
+		|				|
+		Primitive			Secondary
+		|
+	---------------------------------
+	|	|	   |		|
+  Integral	Floating   Character	Boolean
+	byte  1 float 4	    char 2	boolean 1
+	short 2	double 8
+	int   4
+	long  8
+		
+
+
+	byte = 1 byte = 8 bits
+
+	1 bit = 0 off
+		1 on
+
+	2 bits = 0 0 --> 0 
+	         0 1 --> 1
+		 1 0 --> 2
+		 1 1 --> 3
+
+	3 bits = 0 0 0
+		 0 0 1
+		 0 1 0
+		 0 1 1
+		 1 0 0
+		 1 0 1
+		 1 1 0
+	         1 1 1
+
+	 4 bits = 16
+	 5      = 32
+	 6      = 64
+         7      = 128
+	 8      = 256
+
+	-128 -3 -2 -1	0 1 2 3 4..... 127
+	<-------------------------------->
+
+
+Naming Conventions
+---------------------
+class student
+{
+   int ROLLnumber;
+
+   void Havingfun() {
+   
+   }
+}
+
+class STUDENT NAME
+{
+  int RollNumber;
+  void What Apping() {
+  
+  }
+}
+
+	ClassName - Farmer
+		    Student
+		    DriverManager
+		    InsurancePolicy
+		    FootballPlayer
+
+	functionName() - 
+		   setLookAndFeel()
+		   withdrawMoney()
+		   fundsTransfer()
+		   changeTheRollNumberOfStudent()
+		   fun()
+	
+	variableName -		
+
+		  rollNumber
+		  insurancePolicyNumber
+		  accountBalance
+		
+	CONSTANT
+		  PI=3.14
+		  MAX=100
+		  MIN=5
+		  
+	packages
+		 mainpackage.subpackage
+		
+		 java.lang
+		 java.awt.event
+	
+
+https://www.geeksforgeeks.org/7-common-programming-principles-that-every-developer-must-follow/
+		  
+------------------------------
+
+class			vs		object
+|					|
+design of the object		instance of a class
+
+blue print of a house		actual house
+
+LOGICAL PART			PHYSICAL PART
+
+	
+
+	object = data + functions
+		data types +( 4 types of functions)	
+	cat    = color, age, weight, breed
+			+
+			drinkMilk(){ }
+			chaseMice(){}
+			snooze(){}
+
+
+	car = color, engineType, numberOfDoors
+		cost, numberOfMilesDriven
+
+		+
+		takeRight(){ }
+		takeLeft(){ }
+		takeReverse(){}
+		goAhead(){}
+		changeGear(){}
+
+
+	savingsAccount1 = data  + functions
+
+			bankAccountNumber
+			accountHolderName
+			accountBalance;
+			accountType
+			+
+			withdraw() { }
+			deposit(){ }
+			transfer(){ }
+			getBalance(){ }
+			miniStatement(){}
+
+			
+ OOPS Concepts
+-----------------
+
+
+	1. Abstraction
+		it is the "WHAT IS?" part of an object
+
+		- hiding the complexity of an object
+		  - data hiding
+		  - method hiding
+
+	2. Encapsulation
+		it is the "HOW IS IT?" part of an object
+		binding of data and functions
+		in such a way so that certain data
+		is non-available to the users
+		
+			
+	3. Polymorphism
+		ability of a business entity to have
+		multiple forms
+
+		Doctor
+		|
+	----------------
+	|
+	Surgon
+	|
+	HeartSurgeon
+
+			Employee
+			|
+		-------------
+		|
+		Executive
+		|
+		Manager
+		|
+		Director
+
+		a) function overloading
+
+			u can define mulitple functions
+			with same name
+			but they should differ on following
+			terms
+			i) type of arguments/parameters
+			ii) number of arugments
+			iii) sequence of type of arguments
+		b) function overriding
+
+		c) operator overloading
+
+	4. Inheritance
+
+		ability of a business entity to 
+		acquire properties from
+		existing business entities
+
+	single level
+	A
+	|
+	B
+
+	multi level
+	A
+	|
+	B
+	|
+	C
+	
+	multiple level
+
+	A	B
+	|	|
+	---------
+	    |
+	    C
+	
+
+Constructor
+-------------
+
+	- is a special function
+	that has the same name as of the 
+	enclosing class
+	
+	class Point2D
+	{
+		Point2D() { <-- this is a ctor function
+		}
+	}
+
+	- the ctor is automatically called during object 
+	creation process
+
+			allocator of the fields
+			   |
+	Point2D pointObj = new Point2D();
+	|	   |		 |
+	classname reference	constructor function
+		  to the 
+		  object
+
+	- the role of constructor is to initialize
+		the state of the object
+
+	- constructor DOES NOT have return type
+
+
+	- every class comes with a DEFAULT ctor
+	 also known as implicit ctor
+
+
+	- this implicit ctor would be suppressed
+	if you specifiy explicit ctor
+
+
+	- In Java Every class is a CHILD of 
+	one ready made class known as Object class
+	from java.lang package
+
+
+	java.lang.Object is a ROOT class of the 
+	java hierarchy
+
+	Person
+	|gender,age,name
+	Student
+	|marks
+	Employee
+	|salary
+
+	
+	Employee e = new Employee();
+
+
+
+
+
+four types of functions
+based on inheritance
+
+	A - fun() -- 1) exclusive of A
+	|	
+	B - fun() is now 2) inherited to B
+	|    foo() is now exclusive of B
+	|   fun(){ } <-- 3) overridding
+	|
+	C  now fun and foo are inherited to C
+		fun() { } <-- overdding
+		foo() { } <-- overriding
+		far() { } <-- exclusive	
+	
+
+class Magician
+{
+	void doTrick()  {
+		//regular trick...
+	}
+}
+class CardMagician extends Magician
+{
+	void doTrick() {
+		// cards trick...
+	}
+}
+
+
+1. innovate overloading
+2. innovate overriding
+3. overload constructors
+4. constructor invocation in
+	class hierarchy
+5. packages in java  - pre- read
+6. exception handling - pre-read	
+
+	class Hotel
+	{
+		int numberOfRooms;
+		int numberOfParkings;
+
+		A(int a,int b) { }
+		A(int a) { }
+	}

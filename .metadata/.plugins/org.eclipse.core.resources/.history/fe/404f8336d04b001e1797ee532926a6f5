@@ -1,0 +1,10 @@
+
+
+//a public class MUST be defined in its own file
+
+ class Any { //Airline.java
+
+}
+ class Flight {
+	
+}

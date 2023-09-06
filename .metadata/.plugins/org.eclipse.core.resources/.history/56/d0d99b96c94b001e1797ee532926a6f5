@@ -1,0 +1,24 @@
+
+public class MyCalculatorTest {
+	public static void main(String[] args) {
+		
+		Calculator calci = new Calculator();
+		
+		calci.add();
+		calci.sum(10, 20);
+	}
+}
+
+class Calculator
+{
+	
+	void add() {
+		System.out.println("add() no arg, no return");
+	}
+	
+	void sum(int i, int j) {
+		System.out.println("sum(int,int) with 2 args, but no return");
+		int k = i+j;
+		System.out.println("sum is : "+k);
+	}
+}

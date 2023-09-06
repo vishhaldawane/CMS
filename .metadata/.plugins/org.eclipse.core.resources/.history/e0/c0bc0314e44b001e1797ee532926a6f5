@@ -1,0 +1,30 @@
+
+public class ChessTest {
+	public static void main(String[] args) {
+		Chess chess = new WebBasedGraphicalChess();
+		chess.moveKnight();
+		
+		
+	}
+}
+
+class Chess
+{
+	void moveKnight() {//BOSS
+		System.out.println("Moving Knight L-Shape....any direction...");
+	}
+}
+
+class GraphicalChess extends Chess
+{
+		//CHILD
+	
+	
+	
+}
+
+class WebBasedGraphicalChess extends GraphicalChess
+{
+	//GRAND CHILD
+	
+}

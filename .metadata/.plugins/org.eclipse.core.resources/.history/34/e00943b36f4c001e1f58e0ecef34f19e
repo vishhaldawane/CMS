@@ -1,0 +1,9 @@
+package jungle.house;
+
+public class FarmHouse {
+	public static void main(String[] args) {
+		
+		System.out.println("Farm house main....");
+		
+	}
+}

@@ -1,0 +1,59 @@
+
+public class StudentTest {
+
+	
+	public static void main(String[] args) {
+
+		int rollNumber=123;
+		String name="Amod Nagpal";
+		String city="Katni";
+		String state="MP";
+		String country="India";
+		int pin=123123;
+				
+		System.out.println("roll no : "+rollNumber);
+		System.out.println("name    : "+name);
+		System.out.println("city    : "+city);		
+		System.out.println("state   : "+state);
+		System.out.println("country : "+country);
+		System.out.println("pin     : "+pin);
+
+		
+		int rollNumber1=124;
+		String name1="Atul Krishna";
+		String city1="Kasaragoda";
+		String state1="Kerala";
+		String country1="India";
+		int pin1=123456;
+				
+		System.out.println("----------------");
+		System.out.println("roll no : "+rollNumber);
+		System.out.println("name    : "+name1);
+		System.out.println("city    : "+city1);		
+		System.out.println("state   : "+state);
+		System.out.println("country : "+country1);
+		System.out.println("pin     : "+pin1);
+	
+		int rollNumber2=125;
+		String name2="Shivanandana S";
+		String city3="Kollam";
+		String state3="Kerala";
+		String country3="India";
+		int pin3=123890;
+				
+		System.out.println("----------------");
+		System.out.println("roll no : "+rollNumber);
+		System.out.println("name    : "+name1);
+		System.out.println("city    : "+city1);		
+		System.out.println("state   : "+state);
+		System.out.println("country : "+country1);
+		System.out.println("pin     : "+pin1);
+	
+		
+	}
+	
+}
+
+
+
+

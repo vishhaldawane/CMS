@@ -1,0 +1,18 @@
+package jungle.cave;
+
+public class Tiger {
+	void jump() {
+		System.out.println("Tiger is jumping....");
+	}
+	private void hunt() {
+		System.out.println("Tiger is hunting....");
+	}
+}
+class WhiteTiger extends Tiger
+{
+	void jump() {
+		super.hunt();
+		System.out.println("White tiger is jumping..");;
+	}
+}
+

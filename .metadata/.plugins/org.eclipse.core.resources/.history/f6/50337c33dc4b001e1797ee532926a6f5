@@ -1,0 +1,25 @@
+
+public class InheritanceTest {
+	public static void main(String[] args) {
+		
+		Point2D  pointObj1 = new Point2D();
+		
+		//pointObj1.setPoint2D(70,80);
+		pointObj1.showPoint2D();
+	}
+}
+
+
+class Point2D
+{
+	int x;
+	int y;
+	
+	Point2D() {
+		System.out.println("Point2D() constructor...called..");
+	}
+	void showPoint2D() {
+		System.out.println("x "+x);
+		System.out.println("y "+y);
+	}
+}

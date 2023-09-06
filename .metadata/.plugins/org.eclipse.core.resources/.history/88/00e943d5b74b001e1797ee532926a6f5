@@ -1,0 +1,21 @@
+
+public class StudentTest {
+
+	
+	public static void main(String[] args) {
+
+		int rollNumber=123;
+		String name="Amod Nagpal";
+		String city="Katni";
+		String state="MP";
+		String country="India";
+		int pin=123123;
+		
+		System.out.println("");
+	}
+	
+}
+
+
+
+

@@ -1,0 +1,7 @@
+package jungle.tree;
+
+class Parrot {
+	void fly() {
+		System.out.println("Parrot is flying....");
+	}
+}

@@ -1,0 +1,22 @@
+
+public class OverridingTest {
+	public static void main(String[] args) {
+		
+		Doctor doctor = new Doctor();
+		doctor.diagnose();
+		
+		doctor = new Surgeon();
+		doctor.diagnose();
+		
+		doctor = new HeartSurgeon();
+		doctor.diagnose();
+		
+		
+		
+		Phone phone = new Phone();
+		
+		phone.dial("Jack");
+		phone.dial("Jane", "Julie");
+		
+	}
+}

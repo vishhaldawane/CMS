@@ -1,0 +1,39 @@
+
+public class PhoneTest {
+	public static void main(String[] args) {
+		
+		Phone myPhone = new Phone();
+		
+		myPhone.dial("Divya");
+		
+		byte speedDialCode = 101;
+		
+		myPhone.dial(speedDialCode);
+		
+		myPhone.dial("Vishal", "Divya");
+		
+		myPhone.dial(speedDialCode, "Rajesh");
+	}
+}
+
+class Phone
+{
+	void dial(String name) {
+		System.out.println("dial(String) : dialing...."+name);
+	}
+	
+	void dial(String name1, String name2) {
+		System.out.println("dial(String,String) : dialing...."+name1 +" and "+name2);
+
+	}
+	
+	void dial(byte code) {
+		System.out.println("dial(byte) : dialing...."+code);
+	}
+	
+	void dial(byte code, String name) {
+		System.out.println("dial(byte,String) : dialing...."+code+" for "+name);
+
+	}
+	
+}

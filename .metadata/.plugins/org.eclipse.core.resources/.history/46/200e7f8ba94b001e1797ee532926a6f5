@@ -1,0 +1,16 @@
+
+public class Test {
+
+	public static void main(String[] args) {
+
+		System.out.println("Begin main");
+		System.out.println("Its wonderfull to work here in IDE");
+	}
+
+}
+/*
+
+	javac Test.java
+	java  Test
+
+*/

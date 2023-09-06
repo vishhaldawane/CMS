@@ -1,0 +1,17 @@
+
+public class MyCalculatorTest {
+	public static void main(String[] args) {
+		
+		Calculator calci = new Calculator();
+		
+		calci.add();
+	}
+}
+
+class Calculator
+{
+	
+	void add() {
+		System.out.println("add() no arg, no return");
+	}
+}

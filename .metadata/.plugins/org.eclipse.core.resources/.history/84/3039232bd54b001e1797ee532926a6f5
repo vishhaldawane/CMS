@@ -1,0 +1,16 @@
+
+public class PhoneTest {
+	public static void main(String[] args) {
+		
+		Phone myPhone = new Phone();
+		
+		myPhone.dial("Rajesh");
+	}
+}
+
+class Phone
+{
+	void dial(String name) {
+		System.out.println("dial(String) : dialing...."+name);
+	}
+}

@@ -1,0 +1,11 @@
+
+ class Banking { //Banking.java
+	 public static void main(String[] args) {
+			System.out.println("this is from Banking");
+		}
+}
+ class SavingsAccount {
+	 public static void main(String[] args) {
+			System.out.println("this is from SavingsAccount");
+		}
+}

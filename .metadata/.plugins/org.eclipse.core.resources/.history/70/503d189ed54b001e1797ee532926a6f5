@@ -1,0 +1,25 @@
+
+public class PhoneTest {
+	public static void main(String[] args) {
+		
+		Phone myPhone = new Phone();
+		
+		myPhone.dial("Divya");
+		
+		byte speedDialCode = 101;
+		
+		myPhone.dial(speedDialCode);
+	}
+}
+
+class Phone
+{
+	void dial(String name) {
+		System.out.println("dial(String) : dialing...."+name);
+	}
+	
+	void dial(byte code) {
+		System.out.println("dial(byte) : dialing...."+code);
+	}
+	
+}

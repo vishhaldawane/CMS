@@ -1,0 +1,56 @@
+public class InheritanceTest {
+	public static void main(String[] args) {
+		Point2D pointObj1 = new Point2D(77,88);
+
+		System.out.println("pointObj1 : "+pointObj1);
+		
+		Point3D pointObj2 = new Point3D(60,70,80);
+		System.out.println("pointObj2 : "+pointObj2);
+		
+		
+	}
+}
+
+class Point2D { //indirectly a child of Object class
+	
+	private int x;
+	private int y;
+	
+	public Point2D(int x, int y) {
+		super();
+		this.x = x;
+		this.y = y;
+	}
+
+	@Override
+	public String toString() {
+		return "Point2D [x=" + x + ", y=" + y + "]";
+	}
+}
+
+class Point3D { //indirectly a child of Object class
+	
+	private int x;
+	private int y;
+	
+	private int z; //extra
+	
+									//extra
+	public Point3D(int x, int y,     int z) {
+		
+		this.x = x;
+		this.y = y;
+		
+		this.z= z;
+	}
+
+	@Override
+	public String toString() {							//extra
+		return "Point3D [x=" + x + ", y=" + y + ",      z=" + z + "]";
+	}
+
+	
+	
+	
+
+}

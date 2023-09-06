@@ -1,0 +1,27 @@
+
+public class SingleLevelTest {
+	public static void main(String[] args) {
+		
+		Person person = new Person('F',"Jane",23);
+		System.out.println("person : "+person);
+	}
+}
+
+class Person
+{
+	char gender;
+	String name;
+	int age;
+	public Person(char gender, String name, int age) {
+		super();
+		this.gender = gender;
+		this.name = name;
+		this.age = age;
+	}
+	@Override
+	public String toString() {
+		return "Person [gender=" + gender + ", name=" + name + ", age=" + age + "]";
+	}
+	
+	
+}

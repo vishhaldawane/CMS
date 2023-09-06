@@ -1,0 +1,8 @@
+
+public class OverridingTest {
+	public static void main(String[] args) {
+		
+		Doctor doctor = new Doctor();
+		doctor.diagnose();
+	}
+}

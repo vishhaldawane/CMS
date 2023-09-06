@@ -1,0 +1,26 @@
+
+public class ConstructorHierarchyTest {
+	public static void main(String[] args) {
+		
+		GrandFather gf = new GrandFather();
+		gf.wakeupEarly();
+		gf.walking();
+		gf.farming();
+	}
+}
+
+class GrandFather
+{
+	GrandFather() {
+		System.out.println("GrandFather() ctor...");
+	}
+	void farming() {
+		System.out.println("GrandFather is farming...");
+	}
+	void walking() {
+		System.out.println("GrandFather is walking...");
+	}
+	void wakeupEarly() {
+		System.out.println("GrandFather is waking up at 4.30");
+	}
+}

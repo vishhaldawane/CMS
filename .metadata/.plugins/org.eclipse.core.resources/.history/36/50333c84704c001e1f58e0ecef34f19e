@@ -1,0 +1,11 @@
+package jungle.tree;
+
+import jungle.river.Frog;
+
+public class Parrot {
+	public void fly() {
+		System.out.println("Parrot is flying....");
+		Frog frog = new Frog();
+		frog.swim();
+	}
+}

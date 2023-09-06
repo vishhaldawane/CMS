@@ -1,0 +1,52 @@
+
+public class SingleLevelTest {
+	public static void main(String[] args) {
+		
+		Person person = new Person('F',"Jane",23);
+		System.out.println("person : "+person);
+		
+		Student student = new Student('M',"Jack",21,1234,"Mech Eng","Bharati VidyaPeeth",9.9f);
+		System.out.println("student : "+student);
+		
+	}
+}
+
+class Person
+{
+	char gender;
+	String name;
+	int age;
+	public Person(char gender, String name, int age) {
+		super();
+		this.gender = gender;
+		this.name = name;
+		this.age = age;
+	}
+	@Override
+	public String toString() {
+		return "Person [gender=" + gender + ", name=" + name + ", age=" + age + "]";
+	}
+	
+	
+}
+
+class Student extends Person
+{
+	int rollNumber;
+	String stream;
+	String college;
+	float  finalCgp;
+	public Student(char gender, String name, int age, int rollNumber, String stream, String college, float finalCgp) {
+		super(gender, name, age);
+		this.rollNumber = rollNumber;
+		this.stream = stream;
+		this.college = college;
+		this.finalCgp = finalCgp;
+	}
+	@Override
+	public String toString() {
+		return "Student [toString()=" + super.toString() + ", rollNumber=" + rollNumber + ", stream=" + stream
+				+ ", college=" + college + ", finalCgp=" + finalCgp + "]";
+	}
+
+}

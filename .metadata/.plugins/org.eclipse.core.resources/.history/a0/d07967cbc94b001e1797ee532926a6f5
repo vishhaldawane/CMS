@@ -1,0 +1,33 @@
+
+public class MyCalculatorTest {
+	public static void main(String[] args) {
+		
+		Calculator calci = new Calculator();
+		
+		calci.add();
+		calci.sum(10, 20);
+		
+		float answer = calci.findAverage(520, 630, 720);
+		System.out.println("The average is : "+answer);
+	}
+}
+
+class Calculator
+{
+	
+	void add() {
+		System.out.println("add() no arg, no return");
+	}
+	
+	void sum(int i, int j) {
+		System.out.println("sum(int,int) with 2 args, but no return");
+		int k = i+j;
+		System.out.println("sum is : "+k);
+	}
+	
+	float findAverage(int i, int j, int k) {
+		System.out.println("findAverage(int,int,int)..with 3 args, and with return value");
+		float avg = (i+j+k)/3.0f;
+		return avg; // dont forget to return value 
+	}
+}

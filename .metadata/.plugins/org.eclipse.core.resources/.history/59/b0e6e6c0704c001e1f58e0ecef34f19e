@@ -1,0 +1,10 @@
+package jungle.river;
+
+public class Frog {
+	public void jump() {
+		System.out.println("Frog is jumping....");
+	}
+	public void swim() {
+		System.out.println("Frog is swiming...");
+	}
+}

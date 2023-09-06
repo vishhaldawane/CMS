@@ -1,0 +1,21 @@
+
+public class ChessTest {
+	public static void main(String[] args) {
+		Chess chess = new GraphicalChess();
+		chess.moveKnight();
+		
+		
+	}
+}
+
+class Chess
+{
+	void moveKnight() {
+		System.out.println("Moving Knight L-Shape....any directiona...");
+	}
+}
+
+class GraphicalChess extends Chess
+{
+	
+}

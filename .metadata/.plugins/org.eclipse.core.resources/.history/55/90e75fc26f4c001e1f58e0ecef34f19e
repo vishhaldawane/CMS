@@ -1,0 +1,11 @@
+package jungle.house;
+
+public class FarmHouse {
+	public static void main(String[] args) {
+		
+		System.out.println("Farm house main....");
+		Parrot parrot = new Parrot();
+		Hen hen = new Hen();
+		hen.eatRice();
+	}
+}

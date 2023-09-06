@@ -1,0 +1,29 @@
+
+public class FunctionTypeTest {
+	public static void main(String[] args) {
+		
+	}
+}
+
+class School
+{
+	//no return        no argument - 1
+	void cleanWhiteBoard() {
+		System.out.println("Cleaning the white board..");
+	}
+}
+/*
+ 
+  
+  Functions are of 4 types
+  
+  1. function without argument, and without return value
+  
+  2. function with arguments, but without return value
+  
+  3. function with arguments and with return value
+  
+  4. function without arguments, but with return value
+  
+  
+ */

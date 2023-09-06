@@ -1,0 +1,7 @@
+package jungle.cave;
+
+public class Tiger {
+	void jump() {
+		System.out.println("Tiger is jumping....");
+	}
+}
