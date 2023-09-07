@@ -7,18 +7,18 @@ import javax.swing.JTextField;
 
 public class GraphicsTest {
 	public static void main(String[] args) {
-
+	
+		MyFrame frame1 = new MyFrame("My Notepad1",400,150,50,50);
+		MyFrame frame2 = new MyFrame("My Notepad2",400,150,250,250);
+		MyFrame frame3 = new MyFrame("My Notepad3",400,150,650,250);
+	
 		
-		
-		MyFrame frame1 = new MyFrame("My Notepad1",400,250,50,250);
-		MyFrame frame2 = new MyFrame("My Notepad2",400,250,350,250);
-		MyFrame frame3 = new MyFrame("My Notepad3",400,250,650,250);
 		
 		Thread t1 = new Thread(frame1);
 		Thread t2 = new Thread(frame2);
 		Thread t3 = new Thread(frame3);
-		
-		t1.start();
+
+		t1.start(); //thread's start method would invoke your frame's run method
 		t2.start();
 		t3.start();
 		
@@ -27,7 +27,7 @@ public class GraphicsTest {
 	}
 }
 
-class MyFrame extends JFrame implements Runnable
+class MyFrame extends JFrame  implements Runnable
 {
 	JTextField data = new JTextField(10);
 	
@@ -35,15 +35,16 @@ class MyFrame extends JFrame implements Runnable
 		super.setTitle(title);
 		super.setSize(h,w);
 		super.setLocation(x,y);
-		super.setVisible(true);
 		setLayout(new FlowLayout());
 		add(data);
-		
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		super.setVisible(true);
+
 	}
 	
 	public void run() {
 		
-			for(int i=0;i<100000;i++) {
+			for(int i=0;i<1000000;i++) {
 				data.setText(""+i);
 			}
 		
