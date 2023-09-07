@@ -6,7 +6,7 @@ public class BankAccountTest {
 		for(int i=0;i<nums.length;i++) {
 			System.out.println("num : "+nums[i]);
 		}		
-		BankAccount bankAccounts[]= new BankAccount[5];
+		BankAccount bankAccounts[]= new BankAccount[5000];
 		bankAccounts[0] = new BankAccount(101, "Jack", 50000, "savings");
 		bankAccounts[1] = new BankAccount(102, "Jane", 60000, "savings");
 		bankAccounts[2] = new BankAccount(103, "Janet", 70000, "savings");
@@ -16,8 +16,8 @@ public class BankAccountTest {
 			System.out.println("Acc : "+bankAccounts[i]);
 		}
 		
-		for (BankAccount bankAccount : bankAccounts) {
-			System.out.println("=> Bank account : "+bankAccount);
+		for (BankAccount x : bankAccounts) {
+			System.out.println("=> Bank account : "+x);
 		}
 	}
 }
