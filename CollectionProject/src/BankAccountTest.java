@@ -42,6 +42,26 @@ class BankAccount {
 		return position;
 	}
 
+	public static int getCount() {
+		return count;
+	}
+
+	public int getAccountNumber() {
+		return accountNumber;
+	}
+
+	public String getAccountHolder() {
+		return accountHolder;
+	}
+
+	public double getAccountBalance() {
+		return accountBalance;
+	}
+
+	public String getAccountType() {
+		return accountType;
+	}
+
 	@Override
 	public String toString() {
 		return "BankAccount [accountNumber=" + accountNumber + ", accountHolder=" + accountHolder + ", accountBalance="

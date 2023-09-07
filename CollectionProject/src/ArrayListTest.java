@@ -136,7 +136,12 @@ class BankAccountTableModel extends AbstractTableModel {
 		  System.out.println("getValueAt called...row:"+row+ " col:"+col);
 	    BankAccount  accs = accounts.get(row);
 	    switch(col) {
-	      case 0: return accs.getPosition();
+	      case 0: return accs.getAccountNumber();
+	      case 1: return accs.getAccountHolder();
+	      case 2: return accs.getAccountBalance();
+	      case 3: return accs.getAccountType();
+	      
+	      
 	      // to complete here...
 	      default: return null;
 	    }
