@@ -108,6 +108,14 @@ class Milk
 		
 	}
 	
+	Curd coagulate() {
+		
+		Curd curd = new Curd();
+		return curd;
+	}
+	
+	
+	
 	public int getQuantity() {
 		return quantity;
 	}

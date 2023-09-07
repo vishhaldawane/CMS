@@ -1,6 +1,19 @@
 
 
 
+				who
+				|???student, employee, student
+				|developer...role on the planet
+		--------------------------------------
+		|				|
+		where				when
+		|ibis				|2023, Sept 7 8.30
+	------------------------------------------------
+	|			|			|
+	why			what			how
+	|			|			|
+	reason			information	implementation
+
 
 	Java 	Programming Language
 	|	 |		 |
@@ -434,6 +447,12 @@ class CardMagician extends Magician
 		class	ref to allocator ctor
 			Object
 
+		Person person2 = new Person('M','Jack',23);
+
+		Person person3;
+
+		person3 = person2;
+
 
 		STACK				HEAP
 
@@ -453,6 +472,29 @@ class CardMagician extends Magician
 						toString() { }
 
 	
+       FIELD AREA
+
+                                        gender  name    age 
+                                        -------------------------
+                                        |  M    | Jack  | 23    |   
+                                        -------------------------
+                  +-------------------->500
+                  |   
+                +-------+
+                |500    |<-value                
+                +-------+ of the ref                
+                person2               
+
+		+-------+
+                |500    |<-value
+                +-------+ of the ref
+                person3
+
+
+
+		
+
+
 
 Student student = new Student('M',"Jack",21,1234,"Mech Eng","Bharati VidyaPeeth",9.9f);
 
