@@ -839,6 +839,26 @@ interfaces
 	|	   |	      |	|  | 	|  |
 	Whale	 Bat	      S w a n	Parrot
 
+------------------------------------------------
+
+
+				Collection
+				|
+		--------------------------------
+		|				|
+		List(i)				Set
+		|duplicate			|Unique
+	-----------------		-------------------
+	|		|		|
+	ArrayList	LinkedList	TreeSet
+	|		|		|
+growable array	   flexible for DML	numbers
+					EmailIds
+Logs			Contacts
+
+
+
+
 
 
 
