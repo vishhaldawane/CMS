@@ -2,11 +2,16 @@ import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
 import javax.swing.JTextField;
+import javax.swing.table.AbstractTableModel;
+import javax.swing.table.TableModel;
 
 public class ArrayListTest {
 	public static void main(String[] args) {
@@ -40,6 +45,8 @@ class BankAccountFrame extends JFrame implements ActionListener
 	JButton clear = new JButton("CLEAR");
 	JButton show = new JButton("SHOW ACCOUNTS");
 
+	JTable table = new JTable();;
+	
 	
 	BankAccountFrame() {
 		
@@ -51,6 +58,10 @@ class BankAccountFrame extends JFrame implements ActionListener
 		add(save);
 		add(clear);
 		add(show);
+		add(table);
+		table.setBounds(30,40,200,300);          
+	    JScrollPane sp=new JScrollPane(table);
+	    add(sp);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
 		save.addActionListener(this);
@@ -68,6 +79,7 @@ class BankAccountFrame extends JFrame implements ActionListener
 			String accType = data4.getText();
 			
 			BankAccount bankAccount = new BankAccount(accNum,accHolderName,accBal,accType);
+			
 			list.add(bankAccount);
 			System.out.println("BankAccount added to the List...");
 			
@@ -82,8 +94,12 @@ class BankAccountFrame extends JFrame implements ActionListener
 		else 	if(ae.getSource()==show) {
 			System.out.println("SHOW button is clicked....");
 			
+			TableModel model = new BankAccountTableModel(list);
+			table.setModel(model);
+			
 			for (BankAccount x : list) {
 				System.out.println("=> Bank account : "+x);
+				//table.add
 			}
 			
 		}
@@ -94,3 +110,43 @@ class BankAccountFrame extends JFrame implements ActionListener
 	}
 	
 }
+
+class BankAccountTableModel extends AbstractTableModel {
+	  private List<BankAccount> accounts ;
+	  private String[] columns ; 
+
+	  public BankAccountTableModel(List<BankAccount> accs){
+	    super();
+	    accounts = accs ;
+	    columns = new String[]{"AccountNumber","Account Holder","Account Balance", "Account Type"};
+	  }
+
+	  // Number of column of your table
+	  public int getColumnCount() {
+	    return columns.length ;
+	  }
+
+	  // Number of row of your table
+	  public int getRowCount() {
+	    return accounts.size();
+	  }
+
+	  // The object to render in a cell
+	  public Object getValueAt(int row, int col) {
+		  System.out.println("getValueAt called...row:"+row+ " col:"+col);
+	    BankAccount  accs = accounts.get(row);
+	    switch(col) {
+	      case 0: return accs.getPosition();
+	      // to complete here...
+	      default: return null;
+	    }
+	  }
+
+	  // Optional, the name of your column
+	  public String getColumnName(int col) {
+	    return columns[col] ;
+	  }
+
+	
+
+	}

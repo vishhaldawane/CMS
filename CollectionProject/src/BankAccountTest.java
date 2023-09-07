@@ -22,6 +22,8 @@ public class BankAccountTest {
 	}
 }
 class BankAccount {
+	static int count=0;
+	private int position;
 	private int accountNumber;
 	private String accountHolder;
 	private double accountBalance;
@@ -29,10 +31,15 @@ class BankAccount {
 	
 	public BankAccount(int accountNumber, String accountHolder, double accountBalance, String accountType) {
 		super();
+		position=++count;
 		this.accountNumber = accountNumber;
 		this.accountHolder = accountHolder;
 		this.accountBalance = accountBalance;
 		this.accountType = accountType;
+	}
+	
+	public int getPosition() {
+		return position;
 	}
 
 	@Override
