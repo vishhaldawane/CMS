@@ -27,9 +27,9 @@ public class GraphicsTest {
 	}
 }
 
-class MyFrame extends JFrame  implements Runnable
+class MyFrame extends JFrame  implements Runnable //isA
 {
-	JTextField data = new JTextField(10);
+	JTextField data = new JTextField(10);//hasA
 	
 	MyFrame(String title, int h, int w, int x, int y) {
 		super.setTitle(title);
