@@ -39,6 +39,47 @@
 
 
 
+Core Java
+-----------
+Language fundas
+oops concepts
+packages
+access specifiers
+exception handling
+static/final/abstract
+interfaces***
+multithreading
+generics/collections
+file handling
+JDBC - database operations
+----------------------------------
+Web technolgies
+Hibernate
+Spring - API calls are here - create/update/delete/view/viewAll
+----------
+Angular
+
+31 Thu Day1- SQL*
+01 Fri Day2- SQL*
+02 Sat Day3- SQL
+04 Mon Day4- Project Case Study tables finalized* - Core Java*
+05 Tue Day5- Core Java
+06 Wed Day6- Core Java
+07 Thu Day7- WE ARE HERE
+08 Fri Day8-
+
+
+11 Mon Day9
+12 Tue Day10
+13 Wed Day11
+14 Thu Day12
+15 Fri Day13
+16 Sat Day14
+
+18 Mon Day15 
+
+
+
 	Java Freatures
 
 
@@ -715,14 +756,27 @@ static		across all the 		refer other
 		objects of a 		static 
 		class			members
 ---------------------------------------------------------------------------
-
-abstract
-
+		
+abstract	NA			a method without	contains
+					code body		optional
+								abstract
+								method
 ---------------------------------------------------------------------------
 
+abstract = incomplete, partial, code without body
+
+abstract class GeometricalShape
+{
+	abstract void draw();
+	abstract void calculateArea();
+}
+	
 
 
-				kiteCount
+
+
+
+			kiteCount
 				7
 
 			 color	length	owner	flying	
@@ -765,12 +819,25 @@ abstract
 							kite1.color
 
 		
+interfaces
+	
+	 = pure abstract class
+	 = it cannot have non-abstract methods
+	 = all methods are abstract [ by default ]
+	 = public and abstract
+	 = all fields in it are public static and final
 
-
-
-
-
-
+	
+	Swimming	Walking		Flying	  
+			      |		   |
+			      |		   |
+		Mammal	      |	Bird	   |	
+		|	      |	|
+		|	      |	|  +-------+	   
+		|	      |	|  |	   |
+	------------	      |	--[|]----+ |
+	|	   |	      |	|  | 	|  |
+	Whale	 Bat	      S w a n	Parrot
 
 
 
