@@ -2,14 +2,17 @@ import java.awt.FlowLayout;
 import java.awt.Frame;
 import java.awt.TextField;
 
+import javax.swing.JFrame;
+import javax.swing.JTextField;
+
 public class GraphicsTest {
 	public static void main(String[] args) {
 
 		
 		
-		MyFrame frame1 = new MyFrame("My Notepad1",450,250,150,250);
-		MyFrame frame2 = new MyFrame("My Notepad2",450,250,450,250);
-		MyFrame frame3 = new MyFrame("My Notepad3",450,250,650,250);
+		MyFrame frame1 = new MyFrame("My Notepad1",400,250,50,250);
+		MyFrame frame2 = new MyFrame("My Notepad2",400,250,350,250);
+		MyFrame frame3 = new MyFrame("My Notepad3",400,250,650,250);
 		
 		Thread t1 = new Thread(frame1);
 		Thread t2 = new Thread(frame2);
@@ -24,9 +27,9 @@ public class GraphicsTest {
 	}
 }
 
-class MyFrame extends Frame implements Runnable
+class MyFrame extends JFrame implements Runnable
 {
-	TextField data = new TextField(20);
+	JTextField data = new JTextField(10);
 	
 	MyFrame(String title, int h, int w, int x, int y) {
 		super.setTitle(title);
