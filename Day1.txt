@@ -704,13 +704,67 @@ class WashingMachine extends Machine
 	}
 }
 
+		field			method			class
+---------------------------------------------------------------------------
+		it is a constant,	cannot be		cannot be
+final		non-changeable,		overridden		extended
+		immutable data
+---------------------------------------------------------------------------
+		is used to share 	is used to
+static		across all the 		refer other
+		objects of a 		static 
+		class			members
+---------------------------------------------------------------------------
+
+abstract
+
+---------------------------------------------------------------------------
 
 
 
+				kiteCount
+				7
+
+			 color	length	owner	flying	
+			--------------------------------------------
+			|			
+			-------------------------------------------
+	+-------------->100
+	|
+	100
+	kite1
+
+   			color  length  owner   flying  
+                        --------------------------------------------
+                        |     				
+                        -------------------------------------------
+        +-------------->200
+        |   
+        200 
+        kite2
+
+   			color  length  owner   flying  
+                        --------------------------------------------
+                        |     				
+                        -------------------------------------------
+        +-------------->300
+        |   
+        300 
+        kite3
 
 
 
+		static member		vs		non-static member
+		|					|
+		kiteCount				color,owner,lenght,flying
+		|					|
+		can be referred				can be referred
+		via ClassName				via object name
 
+		Kite.kiteCount				kite1.show()
+							kite1.color
+
+		
 
 
 
