@@ -3,7 +3,6 @@
     <fullyQualifiedTypeName name="java.math.BigInteger"/>
     <fullyQualifiedTypeName name="Point2D"/>
     <fullyQualifiedTypeName name="HeartSurgeon"/>
-    <fullyQualifiedTypeName name="GraphicalChess"/>
     <fullyQualifiedTypeName name="Flight"/>
     <fullyQualifiedTypeName name="GrandFather"/>
     <fullyQualifiedTypeName name="ColouredPoint3D"/>
@@ -19,4 +18,13 @@
     <fullyQualifiedTypeName name="DrivingLicense"/>
     <fullyQualifiedTypeName name="Sugar"/>
     <fullyQualifiedTypeName name="MilkShake"/>
+    <fullyQualifiedTypeName name="Playground"/>
+    <fullyQualifiedTypeName name="Cricketer"/>
+    <fullyQualifiedTypeName name="GraphicalChess"/>
+    <fullyQualifiedTypeName name="GeometricalShape"/>
+    <fullyQualifiedTypeName name="Swimming"/>
+    <fullyQualifiedTypeName name="java.awt.Frame"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="BankAccount"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
 </qualifiedTypeNameHistroy>
