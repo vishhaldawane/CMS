@@ -983,6 +983,60 @@ AUTOBIOGRAPHY OF A YOGI
 
 
 
+2nd floor
+cafe
+
+  MODEL		kitchen <-- chef | table + pojo + poji + pojiimpl = DAO
+		|	wada, chutney sambar
+		|
+  SERVICE	service counter <-- 
+		|
+		dining table <--
+			|
+			sit here.. bread tea 
+
+
+
+
+class D
+{
+	void fun()
+	{
+	}
+} 
+class S
+{
+	D d = new D(); 
+
+	void foo()
+	{
+		d.fun();
+	}
+}
+---------------------------------
+class C {
+
+	S s = new S();
+	void far()
+	{
+		s.foo();
+	}
+}
+class A
+{
+  C c = new C();
+	void fee()
+	{
+		c.far();
+	}
+}
+
+A a = new A();
+a.fee();
+
+
+
+
 
 
 
