@@ -849,12 +849,145 @@ interfaces
 		List(i)				Set
 		|duplicate			|Unique
 	-----------------		-------------------
-	|		|		|
-	ArrayList	LinkedList	TreeSet
-	|		|		|
-growable array	   flexible for DML	numbers
+	|		|		|		|
+	ArrayList	LinkedList	TreeSet		HashSet
+	|		|		|		|	
+growable array	   flexible for DML	numbers		Book
 					EmailIds
 Logs			Contacts
+
+
+
+
+
+JDBC
+-------
+
+
+	Java Database Connectivity
+
+
+	Open Database				JPL
+	|					|
+	Oracle	<------------------------->	Java
+	MySQL		   |	
+	MS-SQL		Driver (i) <-- java.sql 
+	Sybase		  |
+	DB2		-------------------		
+	..		|
+	..	OracleDriver.class
+
+
+				
+
+following diagram is NOT of inheritance
+
+
+
+				Driver
+				|
+			DriverManager
+				| registerDriver()
+				| getConnection()
+				|
+			 Connection
+				|
+		-----------------------------------
+		|		|		|
+	Statement	PreparedStatement   CallableStatement
+	 |			|			|
+	SELECT		INSERT/UPDATE/DELETE	PROCEDURE/FUNCTION (PL/SQL)
+	
+
+
+	0. KNOW YOUR DATABASE  AND THE DRIVER
+
+	1. LOAD THE DRIVER
+	
+	2. GET THE CONNECTION
+
+	3. MAKE A DESIRED STATEMENT
+	
+	4. EXECUTE THE STATEMENT
+
+	5. ACQUIRE THE RESULT IF ANY
+
+	6. CLOSE THE RESULT, STATEMENT, CONNECTION
+
+
+		ask				ask
+		|				|
+		want				have
+		|				|
+		lack				fulfilled
+		brain				brain
+
+	
+	Soul   = Atma Shakti
+	Buddhi = Gyan Shakti
+	Mind   = Ichha shakti
+
+		success = health + wealth + relationship + mental peace
+			  			social
+
+		emotional	spiritual	mental	physical
+
+MIRACLE MORNING
+EMOTIONAL INTELLEGENCE
+AUTOBIOGRAPHY OF A YOGI
+
+
+		E	|	B
+			|
+		--------+--------
+			|
+		S	|	I
+
+
+
+	Java Design Pattern
+	-------------------
+	23 patterns
+
+	Erich Gamma = Gang Of Four
+
+	DAO design pattern
+
+
+
+		data access object = hide the low level database activities
+
+
+
+		Table
+		|
+		mapped
+		with
+		|
+		A Class ---------	POJI(2)			PojiImpl(3)
+		known as 
+		POJO(1)
+	Plain Old Java Object	  Plain Old Java Interface
+
+		Department		DepartmentDAO		DepartmentDAOImpl
+		Employee		EmployeeDAO		EmployeeDAOImpl
+		Customer		CustomerDAO		CustomerDAOImpl
+		Order			OrderDAO		OrderDAOImpl
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
