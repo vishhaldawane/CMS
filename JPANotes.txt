@@ -1,0 +1,205 @@
+
+				Java Object is inside the memory = volatile 
+				|
+				store?
+				|
+			----------------------------------------
+			|			|
+			FILE			DATABASE
+			|			|
+		serialization			Persistence
+
+
+
+
+	BMP						CMP
+	|						|
+	manual jdbc code			automated jdbc code [ boiler plate code ]
+
+insert into dept values (?,?,?);			ORM framework to automate this
+insert into emp  values (?,?,?,?,?);
+insert into cust values (?,?,?,?);
+<--nature-->  X  <---------------->
+  				Object  Relational Mapping
+				|		|     |		
+				java	     table   mapping
+
+
+
+	Hibernate = an ORM framework
+
+Account acc = new Account();
+acc.setters...
+
+		save(acc)
+
+		get()
+		update()
+		delete()
+		
+
+
+		Framework = semideveloped application
+
+
+	Photo Frame shop = various frames/ various designs / types / length
+				wooden/ glass plastic 
+				glass
+
+		Table		Pojo
+		|		|
+		Dept		Department
+
+@Entity
+@Table(name="dept")
+class Department
+{
+
+	@Id
+	@Column("deptno")
+	int departmentNumber;
+
+	@Column("dname")
+	String departmentName;
+
+	@Column("loc");
+	String departmentLocation;
+
+	setter/getter
+}
+
+anyfile.xml
+----------------
+driver=OracleDriver
+dsn=oracle:jdbc:thin:@locahost....
+username=system
+password=system
+..
+..
+..
+..
+
+Department dept  = new Department();
+dept.setDepartmentNumber(60);
+dept.setDepartmentName("IT");
+dept.setDepartmentLocation("Mumbai");
+
+JPA
+--------------
+class DepartmentDAOImpl implements DepartmentDAO
+{
+	EntityManagerFactory emf = Persistence.getEntityManagerFactory("anyfile.xml");  
+	EntityManager em = emf.createEntityManager();
+
+	void insertDepartment(Department dept)
+	{
+		em.persist(dept);
+	}
+}
+
+SpringJPA
+---------------
+
+
+
+
+
+
+
+
+A maven project
+----------------------------
+
+		- project management tool
+	
+		it is a tool 
+		to organize the dependencies of your project
+
+
+
+	1			2				3
+
+	company laptop		yourownlapto			client side machine
+	|			|				|
+	jdk17			jdk11				jdk15
+	oracle21		oracle 18			oracle 12
+	junit4			junit5				junit3
+	x11			x12				x13
+	y5			y8				y7
+	z6			z4				z5
+
+	maven
+	project
+	|
+	pom.xml
+	|
+	all the
+	dependencies
+	declared
+	|
+	
+	jdk15
+	oracle12
+	junit3
+	x9
+	y7
+	z5
+
+	.m2 - folder
+	|
+--------------------------
+|
+jdk15	jdk12	jdk11	jdk17
+*
+
+
+
+	
+local repository
+companies repo [ remote ]
+global repo [ internet ]
+
+
+
+
+
+	*	1. a maven project
+	*	2. maven dependencies for hibernate, junit
+
+	*	3. a configuration file - META-INF\persistence.xml
+
+	*	4. a pojo mapped with table - Department with DEPT table
+
+	*	5. hibernate framework libraries as per maven
+
+	*	6. a client code to test it
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
