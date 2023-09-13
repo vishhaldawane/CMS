@@ -1,0 +1,99 @@
+
+
+
+	Spring is a framework
+
+		- to convert a local method into a remote method
+
+		- to convert a non-transactional method into a transactional method
+
+		- to convert a non-secured method into a secured method
+
+
+		- for dependencies management -
+
+				Inversion of control - IoC
+				DI = dependency injection
+
+
+		SpringProject
+			|
+	---------------------------------------------------------------------
+	|1		|		  |	2		|	  |
+	pom.xml	 Pojo/Component	 spring-configuration xml file  test case META-INF
+									  |3
+									persistence.xml [ JPA config]
+		
+
+		SpringBootProject <== it is a spring application
+		|
+	---------------------------
+	|
+application.properties
+key=value
+a=100
+serverport=8080
+dialect = oracledialect
+..,..username=system
+..,..,..=system
+
+
+Knowledge Vision and Attitude
+
+I. pizza table
+------------------
+II. 
+@Component
+@Entity
+@Table
+class Pizza {
+	@Id
+	..
+	@Column
+	..
+	..
+	..
+
+	void eat() {
+	}
+}
+
+III. 
+@Repository -- CMP
+class PizzaRepo <-- will it deal with EntityMAnager -- PizzaDAOImpl- BMP
+{
+	Pizza pizza = new Pizza();
+
+	void makeIt()	{
+		pizza.eat();
+	}
+}
+---------------------------------------actual businees logic of pizza system is here----
+@Service
+class PizzaService  {
+ 	PizzaRepo repo = new PizzaRepo();
+	void serveIt() {
+		repo.makeIt();
+	} 
+}
+---------------------------------------------------------------------------------
+@RestController
+class PizzaController {
+	PizzaService service = new PizzaService();
+	void takeOrder(...) {
+		service.serveIt();
+	}
+}
+		back end layer created in java using spring boot
+
+===========================================================================================
+
+		front end layer created in angular
+
+@Component( --> pizza.html  pizza.css pizza.ts )
+class PizzaComponent					PizzaService <- written in angular
+{
+	Order <-- button <-- user clicks
+}
+		
+
