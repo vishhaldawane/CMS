@@ -1,0 +1,115 @@
+
+https://www.postman.com/downloads/
+
+
+
+layer1 : plain text
+layer2 : pojo | Pizza			Login		 User            Order            Bill			Payment			
+layer3 : poji | repo | PizzaRepository  LoginRepository  UserRepository  OrderRepository  BillRepository	PaymentRepository
+
+	*** test the layer3 all repositories in junit test cases ***
+
+		idli/wada		dosa			puribhaji	|  | | | 	 |  |
+		foodrepo		foodrepo		foodrepo	juicerepo 	tearepo
+------------------------------------------------------
+layer4 : service layer
+
+		PizzaService	LoginService		UserService	
+		|		   |				|
+		PizzaServiceImpl  LoginServiceImpl	 UserServiceImpl
+
+
+		foodService1		juice service1		tea service1
+		sachin			virat			dhoni
+------------------------------------------------------
+
+	customerA
+	Piyush
+
+
+
+
+layer5 : controller
+------------------------------------------------------------------
+layer6 : UI <- angular - home page - drive it 
+
+			pizzahut.com
+	
+
+class FoodService
+{
+	BaseURL='http://localhost:8080/food/takeOrder/var1/var2';
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+Chatting chatRef = new Student();
+
+iterface Reactive {
+}
+
+class Person implements Reactive, Talking
+{
+
+}
+
+class Student extends Person implements Studying, Chatting
+{
+}
+	a		b
+	Reactive(i), Talking
+	  |react();     talk();
+	Person
+	|y			p		q
+	-----------------     Studying(i), Chatting
+			|     | study();     chat();
+			Student
+			|x
+	----------------------------------------------
+				|  Working(i), Handling
+				|   | work();   handle();
+				Employee
+				|
+				|
+		---------------------------------------------
+						|  Executing
+						|    | execute();
+						Executive
+
+
+
+	TDD = test driven "development"
+		
+
+	Pizza			Burger
+	|			|
+	PizzaRepo		BurgerRepo
+	|findAll		|findAll
+	-------------------------
+		  |
+		FoodService
+		  | hitting both the services
+		  | and capturing data in 2 while loops
+		  | and pushing that data in a list
+		  |
+		FoodController
+		  | will talk to the foodservice and retrieve the list
+		  | and hand it over to the UI
+
+		
+
+
+
+
+
+	
