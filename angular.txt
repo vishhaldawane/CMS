@@ -1,0 +1,172 @@
+node -v
+
+npm -v
+
+"node package manager"
+
+ONE TIME ACTIVITY - to install angular
+1) npm install -g @angular/cli
+
+		command line interface
+
+angular is a MVC framework
+---------------------------------
+
+
+M - model [ data ]
+V - viewl [ pages to show the data]
+C - control the Model with View
+
+			Controller
+			|
+		-------------------
+		|		|
+		Model		View
+		Employee.ts	Employee.html+css+ts
+
+
+mkdir myangularprojects
+
+cd myangularprojects
+
+> ng new my-dream-app
+> ng new online-shopping
+> ng new scheme-for-farmers
+
+> cd my-dream-app
+> ng serve <-- it will serve the application
+
+
+			my-dream-app
+			|
+	-----------------------------------------
+	|	|	|		|	|
+     .angular .vscode node_modules	src	*.json
+					|
+		-----------------------------------
+		|	|	|		|
+		app	assets	index.html	style.css
+		|
+	-------------------------------
+	|LOGIC			VIEW			STYLE
+app.component.ts	app.component.html	app.component.css
+	|		 <h1> hello </h1>	h1{color:red}
+@Component
+	html
+	css
+class AppComponent
+{
+
+}
+
+
+
+
+
+
+LoginComponent		RegistrationComponent	  BillingComponent
+|			|				|
+	'mylogin'
+1)login-component.ts
+|
+class LoginComponent
+{
+	coding
+}
+2)login-component.html
+	HTML coding
+3)login-component.css
+	CSS coding
+
+
+
+1) ng g c SimpleInterestCalculator
+		|
+	-----------------------
+	|		|
+	ts		html
+	|		|
+	declare		fetch this values on screen
+	4 data members	with input type and {{}} OR
+				[ngModel]
+
+
+2) 	add a calculatsi() IN ts file
+	inside the class
+3) and print the answer on console.log
+
+
+4) onclick event of button invoke above function
+	
+
+
+
+
+
+
+
+
+
+
+
+
+1 text file for table
+2 pojo
+3 repo
+4 service
+5 controller<---------------------------+
+					|
+6 ui - angular / react			|
+					|
+	PizzaComponent		PizzaService
+	|				loadAllPizzas();
+----------------------			http://localhost:8080/food/takeOrder/Veg/Chicken
+|
+PizzaComponent.html
+PizzaComponent.css
+PizzaComponent.ts --showPizzas()-> Pizza.ts [ structure of a Pizza pojo ]
+	|		 |
+	make		id,name,desc
+	the array
+	of Pizza
+	|
+	show the array
+	in its html file	
+	
+
+
+
+===================
+my-dream-app
+	|
+	src
+	|
+	index.html
+	|
+	<app-root></app-root>
+	   |
+	selector
+	 |
+	AppComponent [ html + css + ts ]
+	|		|
+	|	CalculatorComponent [ html + css + ts ]
+	|		|
+	|	---------------------------
+	|	|		|
+	|	add() -->	CalculatorService	
+	|			 - addTwoNumbersService(x,y):
+	|				return x+y;
+PizzaComponent[html+css+ts] --> PizzaService()
+  |				|
+constructor() ---------> loadAllPizzasService();
+  |				|
+pizzasArray[] = <----------pizzas[] <-- actual values are here
+
+SavingsAccount.java
+public class SavingsAccount
+--------------------------
+app.savings.account.component.ts
+export class AppSavingsAccountComponent
+
+
+
